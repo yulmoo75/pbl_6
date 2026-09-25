@@ -1,6 +1,6 @@
-package com.netlion.pbl.member;
+package com.netlion.pbl.repository;
 
-import com.netlion.pbl.role.Role;
+import com.netlion.pbl.domain.role.Role;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -33,5 +33,20 @@ public class MemoryMemberRepository implements MemberRepository {
     @Override
     public boolean existsByName(String name) {
         return findByName(name) != null;
+    }
+
+    @Override
+    public void updateByName(String name, Role member) {
+        for (int i = 0; i < members.size(); i++) {
+            if (members.get(i).getName().equals(name)) {
+                members.set(i, member);
+                return;
+            }
+        }
+    }
+
+    @Override
+    public boolean deleteByName(String name) {
+        return members.removeIf(role -> role.getName().equals(name));
     }
 }

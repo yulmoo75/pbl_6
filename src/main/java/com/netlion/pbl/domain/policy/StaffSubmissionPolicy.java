@@ -1,4 +1,4 @@
-package com.netlion.pbl.policy;
+package com.netlion.pbl.domain.policy;
 
 public class StaffSubmissionPolicy implements SubmissionPolicy {
     @Override

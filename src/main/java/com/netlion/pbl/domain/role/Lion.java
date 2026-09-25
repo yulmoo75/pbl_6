@@ -1,7 +1,7 @@
-package com.netlion.pbl.role;
+package com.netlion.pbl.domain.role;
 
-import com.netlion.pbl.policy.LionSubmissionPolicy;
-import com.netlion.pbl.policy.SubmissionPolicy;
+import com.netlion.pbl.domain.policy.LionSubmissionPolicy;
+import com.netlion.pbl.domain.policy.SubmissionPolicy;
 
 public class Lion extends Role {
     private String studentId;
@@ -9,6 +9,10 @@ public class Lion extends Role {
     public Lion(String name, String major, int generation, String part, String studentId) {
         super(name, major, generation, part);
         this.studentId = studentId;
+    }
+
+    public String getStudentId() {
+        return studentId;
     }
 
     @Override
@@ -19,12 +23,5 @@ public class Lion extends Role {
     @Override
     public String getRoleName() {
         return "아기사자";
-    }
-
-    @Override
-    public String getDetailInfo() {
-        return "이름: " + getName() + " | 전공: " + getMajor()
-                + " | 기수: " + getGeneration() + " | 파트: " + getPart() + "\n"
-                + "학번: " + studentId;
     }
 }

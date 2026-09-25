@@ -1,6 +1,6 @@
-package com.netlion.pbl.role;
+package com.netlion.pbl.domain.role;
 
-import com.netlion.pbl.policy.SubmissionPolicy;
+import com.netlion.pbl.domain.policy.SubmissionPolicy;
 
 public abstract class Role {
     private String name;
@@ -19,23 +19,21 @@ public abstract class Role {
         return name;
     }
 
-    protected String getMajor() {
+    public String getMajor() {
         return major;
     }
 
-    protected int getGeneration() {
+    public int getGeneration() {
         return generation;
     }
 
-    protected String getPart() {
+    public String getPart() {
         return part;
     }
 
     protected abstract SubmissionPolicy getPolicy();
 
     public abstract String getRoleName();
-
-    public abstract String getDetailInfo();
 
     public boolean canSubmit() {
         return getPolicy().canSubmit();

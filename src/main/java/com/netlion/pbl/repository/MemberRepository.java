@@ -1,6 +1,6 @@
-package com.netlion.pbl.member;
+package com.netlion.pbl.repository;
 
-import com.netlion.pbl.role.Role;
+import com.netlion.pbl.domain.role.Role;
 
 import java.util.List;
 
@@ -12,4 +12,8 @@ public interface MemberRepository {
     List<Role> findAll();
 
     boolean existsByName(String name);
+
+    void updateByName(String name, Role member);
+
+    boolean deleteByName(String name);
 }

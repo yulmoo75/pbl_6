@@ -1,6 +1,6 @@
 package com.netlion.pbl;
 
-import com.netlion.pbl.member.MemberService;
+import com.netlion.pbl.service.MemberService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

@@ -1,8 +1,8 @@
 package com.netlion.pbl.config;
 
-import com.netlion.pbl.member.MemberRepository;
-import com.netlion.pbl.member.MemberService;
-import com.netlion.pbl.member.MemoryMemberRepository;
+import com.netlion.pbl.repository.MemberRepository;
+import com.netlion.pbl.service.MemberService;
+import com.netlion.pbl.repository.MemoryMemberRepository;
 import org.springframework.context.annotation.Bean;
 // import org.springframework.context.annotation.Configuration;
 
